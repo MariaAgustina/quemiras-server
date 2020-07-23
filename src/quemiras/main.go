@@ -28,6 +28,7 @@ func main() {
     router.HandleFunc("/user/{id}", CreateUserEndpoint).Methods("POST")
     //TODO
     // router.HandleFunc("/user/{id}", DeleteUserEndpoint).Methods("DELETE")
+    router.HandleFunc("/movie", getMovie).Methods("GET")
 
     log.Fatal(http.ListenAndServe(":12345", router))
 }
